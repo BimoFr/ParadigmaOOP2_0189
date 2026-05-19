@@ -58,3 +58,25 @@ public:
         }
     }
 };
+
+int main()
+{
+    // Membuat objek nasabah
+    RekeningSyariah r1("Ahmad (Syariah)", 5000000);
+    RekeningKonvensional r2("Budi (Konvensional)", 2500000);
+    RekeningPremium r3("Citra (Premium >10Jt)", 15000000);
+    RekeningPremium r4("Dewi (Premium <10Jt)", 8000000);
+
+    // Array pointer base class
+    RekeningBank *daftarRekening[] = {&r1, &r2, &r3, &r4};
+
+    cout << "=== HASIL POTONGAN AKHIR BULAN ===" << endl;
+
+    for (int i = 0; i < 4; i++)
+    {
+        daftarRekening[i]->potongAdmin();
+        daftarRekening[i]->info();
+    }
+
+    return 0;
+}
