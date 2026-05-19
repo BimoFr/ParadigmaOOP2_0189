@@ -7,4 +7,18 @@ class RekeningBank
 protected:
     string nama;
     double saldo;
+
+public:
+    RekeningBank(string n, double s)
+    {
+        nama = n;
+        saldo = s;
+    }
+
+    virtual void potongAdmin() = 0;
+
+    void info()
+    {
+        cout << nama << " - Saldo Akhir: Rp " << saldo << endl;
+    }
 };
