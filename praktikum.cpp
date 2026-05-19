@@ -4,5 +4,7 @@ using namespace std;
 
 class RekeningBank
 {
-
+protected:
+    string nama;
+    double saldo;
 };
