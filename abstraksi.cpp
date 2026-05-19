@@ -14,4 +14,9 @@ public:
         x = a;
         y = b;
     }
+    // menampilkan nilai
+    void display()
+    {
+
+    }
 };
